@@ -24,6 +24,7 @@
 
 <p align="center">
   <a href="https://culpritsql.com">culpritsql.com</a> ·
+  <a href="https://explain.culpritsql.com">explain.culpritsql.com</a> ·
   <a href="https://github.com/culpritsql/culprit-sql-studio/blob/main/docs/guide.md">Guide</a> ·
   <a href="https://github.com/culpritsql/culprit-sql-studio/blob/main/docs/ARCHITECTURE.md">Architecture</a> ·
   <a href="https://github.com/culpritsql/culprit-sql-studio/blob/main/docs/agents.md">Coding Agents (MCP)</a> ·
@@ -61,3 +62,16 @@ CulpritIncidentsV1
 | where UpdatedAt > ago(5m) and Status == "active" and Severity == "high"
 | project StartedAt, DatabaseName, CulpritKind, Headline, CulpritSql, DeveloperAction
 ```
+
+#### Developer tools & packages
+
+| Project | Install / Access | Focus |
+| :--- | :--- | :--- |
+| **[Culprit SQL Studio](https://github.com/culpritsql/culprit-sql-studio)** | [culpritsql.com](https://culpritsql.com) | Desktop app, CLI, fleet collector, and 27-tool MCP server |
+| **[Culprit Explain](https://github.com/culpritsql/culprit-explain)** | [explain.culpritsql.com](https://explain.culpritsql.com) | Client-side web visualizer for plans, diffs, and deadlocks |
+| **[Culprit SQL for VS Code](https://github.com/culpritsql/culprit-vscode)** | [VS Code](https://marketplace.visualstudio.com/items?itemName=culpritsql.culprit-sql) · [Open VSX](https://open-vsx.org/extension/culpritsql/culprit-sql) | `.sqlplan` / `.explain.json` / `.xdl` editor, diff studio & SQL CodeLens |
+| **[@culpritsql/devtools](https://github.com/culpritsql/culprit-devtools)** | `npm i @culpritsql/devtools` | React & Node.js SQL HUD, N+1 detector, and live `EXPLAIN` drawer |
+| **[@culpritsql/test](https://github.com/culpritsql/culprit-test)** | `npm i -D @culpritsql/test` | Vitest, Jest & `node:test` matchers for indexes, spills & plan diffs |
+| **[@culpritsql/ci](https://github.com/culpritsql/culprit-ci)** | `uses: culpritsql/culprit-ci@v0.5.6` | SQL migration lock linter, plan gate, SARIF 2.1.0 & PR diff bot |
+| **[@culpritsql/plans](https://github.com/culpritsql/culprit-plans)** | `npm i @culpritsql/plans` | Rust + WebAssembly SQL plan & deadlock parser and differ |
+| **[@culpritsql/plan-viewer](https://github.com/culpritsql/culprit-plan-viewer)** | `npm i @culpritsql/plan-viewer` | React `<PlanViewer />`, `<PlanDiffViewer />` & `<DeadlockViewer />` |
