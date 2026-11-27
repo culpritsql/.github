@@ -24,7 +24,9 @@
 
 <p align="center">
   <a href="https://culpritsql.com">culpritsql.com</a> ·
+  <a href="https://fleet.culpritsql.com">fleet.culpritsql.com</a> ·
   <a href="https://explain.culpritsql.com">explain.culpritsql.com</a> ·
+  <a href="https://culpritsql.com/blog/">Blog</a> ·
   <a href="https://github.com/culpritsql/culprit-sql-studio/blob/main/docs/guide.md">Guide</a> ·
   <a href="https://github.com/culpritsql/culprit-sql-studio/blob/main/docs/ARCHITECTURE.md">Architecture</a> ·
   <a href="https://github.com/culpritsql/culprit-sql-studio/blob/main/docs/agents.md">Coding Agents (MCP)</a> ·
@@ -37,7 +39,7 @@
 | Mode | How it works |
 | :--- | :--- |
 | **Direct**<br><sub>Desktop · CLI · MCP</sub> | Connect directly to a database (or open a saved snapshot offline) to inspect top queries, ranked findings, execution plans, live blocking, virtual indexes, and SQL migrations in CI or coding agents. |
-| **Fleet Collector**<br><sub>ADX · ClickHouse</sub> | Deploy a bounded container in your database network and push verified telemetry and synthesized root-cause findings to **Azure Data Explorer (ADX)** or **ClickHouse** (with Blob or S3 recovery). |
+| **Fleet &amp; Collector**<br><sub>ADX · ClickHouse · Helm</sub> | Deploy `culprit-collector` in your database network to stream verified telemetry and synthesized root-cause findings to **Azure Data Explorer (ADX)** or **ClickHouse**, and run **[Culprit Fleet](https://github.com/culpritsql/culprit-fleet)** ([live demo](https://fleet.culpritsql.com)) for zero-seat OIDC browser triage and remote `POST /mcp`. |
 
 #### What it diagnoses
 
@@ -68,10 +70,11 @@ CulpritIncidentsV1
 | Project | Install / Access | Focus |
 | :--- | :--- | :--- |
 | **[Culprit SQL Studio](https://github.com/culpritsql/culprit-sql-studio)** | [culpritsql.com](https://culpritsql.com) | Desktop app, CLI, fleet collector, and 27-tool MCP server |
-| **[Culprit Explain](https://github.com/culpritsql/culprit-explain)** | [explain.culpritsql.com](https://explain.culpritsql.com) | Client-side web visualizer for plans, diffs, and deadlocks |
-| **[Culprit SQL for VS Code](https://github.com/culpritsql/culprit-vscode)** | [VS Code](https://marketplace.visualstudio.com/items?itemName=culpritsql.culprit-sql) · [Open VSX](https://open-vsx.org/extension/culpritsql/culprit-sql) | `.sqlplan` / `.explain.json` / `.xdl` editor, diff studio & SQL CodeLens |
-| **[@culpritsql/devtools](https://github.com/culpritsql/culprit-devtools)** | `npm i @culpritsql/devtools` | React & Node.js SQL HUD, N+1 detector, and live `EXPLAIN` drawer |
-| **[@culpritsql/test](https://github.com/culpritsql/culprit-test)** | `npm i -D @culpritsql/test` | Vitest, Jest & `node:test` matchers for indexes, spills & plan diffs |
-| **[@culpritsql/ci](https://github.com/culpritsql/culprit-ci)** | `uses: culpritsql/culprit-ci@v0.5.6` | SQL migration lock linter, plan gate, SARIF 2.1.0 & PR diff bot |
-| **[@culpritsql/plans](https://github.com/culpritsql/culprit-plans)** | `npm i @culpritsql/plans` | Rust + WebAssembly SQL plan & deadlock parser and differ |
-| **[@culpritsql/plan-viewer](https://github.com/culpritsql/culprit-plan-viewer)** | `npm i @culpritsql/plan-viewer` | React `<PlanViewer />`, `<PlanDiffViewer />` & `<DeadlockViewer />` |
+| **[Culprit Fleet](https://github.com/culpritsql/culprit-fleet)** | [fleet.culpritsql.com](https://fleet.culpritsql.com) · Helm &amp; GHCR | Self-hosted multi-region fleet command center, archive time-machine &amp; remote MCP server |
+| **[Culprit Explain](https://github.com/culpritsql/culprit-explain)** | [explain.culpritsql.com](https://explain.culpritsql.com) | Client-side web visualizer for plans, diffs, deadlocks, and `.xel` captures |
+| **[Culprit SQL for VS Code](https://github.com/culpritsql/culprit-vscode)** | [VS Code](https://marketplace.visualstudio.com/items?itemName=culpritsql.culprit-sql) · [Open VSX](https://open-vsx.org/extension/culpritsql/culprit-sql) | `.sqlplan` / `.explain.json` / `.xdl` editor, diff studio &amp; SQL CodeLens |
+| **[@culpritsql/devtools](https://github.com/culpritsql/culprit-devtools)** | `npm i @culpritsql/devtools` | React &amp; Node.js SQL HUD, N+1 detector, and live `EXPLAIN` drawer |
+| **[@culpritsql/test](https://github.com/culpritsql/culprit-test)** | `npm i -D @culpritsql/test` | Vitest, Jest &amp; `node:test` matchers for indexes, spills &amp; plan diffs |
+| **[@culpritsql/ci](https://github.com/culpritsql/culprit-ci)** | `uses: culpritsql/culprit-ci@v0.5.11` | SQL migration lock linter, plan gate, SARIF 2.1.0 &amp; PR diff bot |
+| **[@culpritsql/plans](https://github.com/culpritsql/culprit-plans)** | `npm i @culpritsql/plans` | Rust + WebAssembly SQL plan &amp; deadlock parser and differ |
+| **[@culpritsql/plan-viewer](https://github.com/culpritsql/culprit-plan-viewer)** | `npm i @culpritsql/plan-viewer` | React `<PlanViewer />`, `<PlanDiffViewer />` &amp; `<DeadlockViewer />` |
