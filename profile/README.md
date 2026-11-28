@@ -25,13 +25,14 @@
 <p align="center">
   <a href="https://culpritsql.com">culpritsql.com</a> ·
   <a href="https://fleet.culpritsql.com">fleet.culpritsql.com</a> ·
-  <a href="https://explain.culpritsql.com">explain.culpritsql.com</a> ·
+  <a href="https://explain.culpritsql.com">explain.culpritsql.com</a>
+  <br>
   <a href="https://culpritsql.com/blog/">Blog</a> ·
   <a href="https://github.com/culpritsql/culprit-sql-studio/blob/main/docs/guide.md">Guide</a> ·
   <a href="https://github.com/culpritsql/culprit-sql-studio/blob/main/docs/ARCHITECTURE.md">Architecture</a> ·
   <a href="https://github.com/culpritsql/culprit-sql-studio/blob/main/docs/agents.md">Coding Agents (MCP)</a> ·
   <a href="https://github.com/culpritsql/culprit-sql-studio/blob/main/docs/collector.md">Collector &amp; ADX</a> ·
-  <a href="https://github.com/culpritsql/culprit-sql-studio/releases/latest">Releases</a>
+  <a href="https://culpritsql.com/releases/">Releases</a>
 </p>
 
 #### Two ways to run it
