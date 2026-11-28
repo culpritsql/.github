@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  Open-source performance diagnostics and root-cause analysis for relational databases.
+  Open-source performance diagnostics and root-cause analysis for relational and analytical databases.
 </p>
 
 <p align="center">
@@ -19,6 +19,7 @@
   <img alt="YugabyteDB" src="https://img.shields.io/badge/YugabyteDB-C94B25?style=flat-square">
   <img alt="MySQL" src="https://img.shields.io/badge/MySQL-00758F?style=flat-square&logo=mysql&logoColor=white">
   <img alt="MariaDB" src="https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white">
+  <img alt="ClickHouse" src="https://img.shields.io/badge/ClickHouse-FFCC01?style=flat-square&logo=clickhouse&logoColor=black">
   <img alt="SQLite" src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white">
 </p>
 
